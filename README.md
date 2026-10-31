@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Centralized-Cloud-Data-Repository/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Centralized-Cloud-Data-Repository?style=for-the-badge&color=gold" alt="GitHub Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Centralized-Cloud-Data-Repository/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Centralized-Cloud-Data-Repository?style=for-the-badge&color=gold" alt="GitHub_Stars" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Centralized-Cloud-Data-Repository/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Centralized-Cloud-Data-Repository?style=for-the-badge&color=blue" alt="GitHub Forks" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Centralized-Cloud-Data-Repository/issues"><img src="https://img.shields.io/github/issues/ishandutta2007/Awesome-Centralized-Cloud-Data-Repository?style=for-the-badge&color=red" alt="GitHub Issues" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Centralized-Cloud-Data-Repository/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-green?style=for-the-badge" alt="License" /></a>
@@ -72,7 +72,7 @@ The sector exhibits **moderate fragmentation with concentrated enterprise anchor
 
 ## 💻 Open-Source GitHub Projects
 
-Below are the most prominent open-source repositories powering modern decentralized and centralized data repositories, sorted by **GitHub Star Count (descending)**:
+Below are the most prominent open-source repositories powering modern decentralized and centralized data repositories, sorted by **GitHub Stars_Count (descending)**:
 
 - **[MinIO](https://github.com/minio/minio)** [![Stars](https://img.shields.io/github/stars/minio/minio?style=social&color=white)](https://github.com/minio/minio/stargazers)
   
@@ -191,7 +191,7 @@ Contributions are warmly welcomed! Please follow these steps to add or update pr
 3. 📝 **Add or edit entries in `README.md`**:
    - Ensure factual accuracy and link directly to official documentation or code repositories.
    - For SaaS products: provide transparent, verified starting-tier pricing and exact free trial / free tier limits.
-   - For Open-Source projects: provide the repository link, star badge, license, core capabilities, tech stack, and architectural trade-offs.
+   - For Open-Source projects: provide the repository link, Stars_Badge, license, core capabilities, tech stack, and architectural trade-offs.
 4. 🚀 **Submit a Pull Request (PR)** with a clear title and brief rationale.
 
 🌟 **Star the repository** if you find this landscape helpful for your data engineering journey!
