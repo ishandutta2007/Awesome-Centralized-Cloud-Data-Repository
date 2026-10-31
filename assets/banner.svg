@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#070b12" />
+    </linearGradient>
+
+    <!-- Glowing Orbs Gradients -->
+    <radialGradient id="orbCyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="orbViolet" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="orbEmerald" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Text Gradients -->
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="pillGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9" />
+    </linearGradient>
+
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6" />
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="0.6" />
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#334155" stroke-width="0.75" stroke-opacity="0.35" />
+    </pattern>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <style>
+      .pulse-slow {
+        animation: pulse 6s ease-in-out infinite alternate;
+      }
+      .pulse-fast {
+        animation: pulse 4s ease-in-out infinite alternate-reverse;
+      }
+      .data-flow {
+        stroke-dasharray: 8 16;
+        animation: dash 15s linear infinite;
+      }
+      .data-flow-rev {
+        stroke-dasharray: 6 12;
+        animation: dash-rev 12s linear infinite;
+      }
+      .orbit-node {
+        animation: float 5s ease-in-out infinite alternate;
+      }
+      @keyframes pulse {
+        0% { transform: scale(0.9) translate(0, 0); opacity: 0.4; }
+        100% { transform: scale(1.15) translate(20px, -15px); opacity: 0.85; }
+      }
+      @keyframes dash {
+        to { stroke-dashoffset: -300; }
+      }
+      @keyframes dash-rev {
+        to { stroke-dashoffset: 300; }
+      }
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        100% { transform: translateY(-8px); }
+      }
+    </style>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="420" fill="url(#bgGrad)" />
+
+  <!-- Grid Overlay -->
+  <rect width="1200" height="420" fill="url(#grid)" />
+
+  <!-- Animated Glowing Atmosphere Orbs in Background -->
+  <g class="pulse-slow">
+    <circle cx="200" cy="100" r="180" fill="url(#orbCyan)" />
+  </g>
+  <g class="pulse-fast">
+    <circle cx="1000" cy="120" r="220" fill="url(#orbViolet)" />
+  </g>
+  <g class="pulse-slow">
+    <circle cx="600" cy="360" r="160" fill="url(#orbEmerald)" />
+  </g>
+
+  <!-- Dynamic Animated Tech Circuit / Network Flow Lines in Background (below text) -->
+  <g stroke-linecap="round" fill="none">
+    <!-- Line 1: Lakehouse Pipeline -->
+    <path d="M 60 70 Q 300 20 600 80 T 1140 60" stroke="#38bdf8" stroke-width="1.8" stroke-opacity="0.45" class="data-flow" />
+    <!-- Line 2: Storage Federation -->
+    <path d="M 60 360 Q 350 400 650 350 T 1140 370" stroke="#a855f7" stroke-width="1.8" stroke-opacity="0.45" class="data-flow-rev" />
+    <!-- Line 3: Cross Mesh Connection -->
+    <path d="M 120 180 C 250 320, 400 280, 550 340 S 900 260, 1080 200" stroke="#818cf8" stroke-width="1.2" stroke-opacity="0.3" class="data-flow" />
+  </g>
+
+  <!-- Background Network Floating Nodes -->
+  <g opacity="0.6">
+    <circle cx="180" cy="70" r="4" fill="#38bdf8" filter="url(#glow)" />
+    <circle cx="480" cy="50" r="3" fill="#818cf8" />
+    <circle cx="780" cy="80" r="4.5" fill="#c084fc" filter="url(#glow)" />
+    <circle cx="1020" cy="65" r="3.5" fill="#38bdf8" />
+    <circle cx="240" cy="360" r="4" fill="#a855f7" filter="url(#glow)" />
+    <circle cx="850" cy="365" r="3.5" fill="#38bdf8" />
+    <circle cx="1060" cy="370" r="4" fill="#10b981" filter="url(#glow)" />
+  </g>
+
+  <!-- Center Card Backdrop (Protects Text Clarity) -->
+  <rect x="130" y="48" width="940" height="324" rx="24" fill="#090e1a" fill-opacity="0.75" stroke="url(#borderGrad)" stroke-width="1.5" />
+
+  <!-- Content Layer (Foreground, High Contrast, Perfectly Crisp) -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" text-anchor="middle">
+    
+    <!-- Top Pill / Tagline Badge -->
+    <g transform="translate(600, 92)">
+      <rect x="-175" y="-16" width="350" height="32" rx="16" fill="url(#pillGrad)" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.5" />
+      <text y="5" fill="#38bdf8" font-size="12.5" font-weight="700" letter-spacing="1.5">⚡ UNIFIED ENTERPRISE DATA LAKEHOUSE</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="600" y="162" fill="url(#titleGrad)" font-size="40" font-weight="900" letter-spacing="-0.5">Centralized Cloud Data Repository</text>
+
+    <!-- Subtitle -->
+    <text x="600" y="202" fill="#e2e8f0" font-size="17" font-weight="500" letter-spacing="0.2">
+      Curated Landscape of Catalogs, Lakehouses, Object Storage &amp; Governance Platforms
+    </text>
+
+    <!-- Tagline description -->
+    <text x="600" y="232" fill="#94a3b8" font-size="13.5" font-weight="400">
+      Apache Iceberg • MinIO • Unity Catalog • Snowflake Sharing • Delta Lake • OpenMetadata • AWS Lake Formation
+    </text>
+
+    <!-- Feature Attribute Badges / Ecosystem Pills -->
+    <g transform="translate(600, 290)">
+      <!-- Pill 1: Data Catalogs -->
+      <g transform="translate(-360, 0)" class="orbit-node">
+        <rect x="-65" y="-18" width="130" height="36" rx="18" fill="#1e293b" stroke="#38bdf8" stroke-opacity="0.5" stroke-width="1.2" />
+        <text y="5" fill="#f8fafc" font-size="12" font-weight="600">📂 Data Catalogs</text>
+      </g>
+
+      <!-- Pill 2: Table Formats -->
+      <g transform="translate(-180, 0)" class="orbit-node">
+        <rect x="-65" y="-18" width="130" height="36" rx="18" fill="#1e293b" stroke="#818cf8" stroke-opacity="0.5" stroke-width="1.2" />
+        <text y="5" fill="#f8fafc" font-size="12" font-weight="600">🧊 Open Formats</text>
+      </g>
+
+      <!-- Pill 3: Object Storage -->
+      <g transform="translate(0, 0)" class="orbit-node">
+        <rect x="-65" y="-18" width="130" height="36" rx="18" fill="#1e293b" stroke="#a855f7" stroke-opacity="0.5" stroke-width="1.2" />
+        <text y="5" fill="#f8fafc" font-size="12" font-weight="600">🪣 Object Storage</text>
+      </g>
+
+      <!-- Pill 4: Governance & Lineage -->
+      <g transform="translate(180, 0)" class="orbit-node">
+        <rect x="-70" y="-18" width="140" height="36" rx="18" fill="#1e293b" stroke="#ec4899" stroke-opacity="0.5" stroke-width="1.2" />
+        <text y="5" fill="#f8fafc" font-size="12" font-weight="600">🛡️ Data Governance</text>
+      </g>
+
+      <!-- Pill 5: Zero-Copy Sharing -->
+      <g transform="translate(360, 0)" class="orbit-node">
+        <rect x="-65" y="-18" width="130" height="36" rx="18" fill="#1e293b" stroke="#10b981" stroke-opacity="0.5" stroke-width="1.2" />
+        <text y="5" fill="#f8fafc" font-size="12" font-weight="600">⚡ Zero-Copy</text>
+      </g>
+    </g>
+
+    <!-- Bottom Accent Highlights -->
+    <text x="600" y="348" fill="#64748b" font-size="11.5" font-weight="500" letter-spacing="1">
+      ENTERPRISE ARCHITECTURE • ZERO VENDOR LOCK-IN • PRODUCTION-GRADE STANDARDS
+    </text>
+  </g>
+</svg>
