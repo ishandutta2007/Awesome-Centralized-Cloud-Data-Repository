@@ -32,6 +32,7 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## Table of Contents
 
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
 - [SaaS/Hosted Platforms](#saas-hosted-platforms)
 
 - [Open-Source GitHub Projects](#open-source-github-projects)
@@ -42,50 +43,21 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 
 
+## Sector Overview & Market Dynamics
+
+The global data governance and centralized cloud data repository market is estimated at **$5.2 billion in 2024–2025** and is projected to expand to **over $16B–$22 billion by 2030** (CAGR ~20–22%). The sector is **moderately fragmented to moderately consolidated**: while cloud hyperscalers and enterprise data platform giants capture the lion's share of large enterprise deployments, high demand for vendor neutrality and multi-cloud portability has fueled a rapidly expanding, highly competitive ecosystem of specialized metadata platforms and open-source lakehouse formats.
+
 ## SaaS/Hosted Platforms
 
-
-
-- **[Databricks Unity Catalog](https://www.databricks.com/)**
-
-  **Unified governance layer for data and AI** across the lakehouse. In production since 2021, managing **~100 million tables, ~550,000 volumes, and ~400,000 ML models** for ~9,000 customers, serving ~60,000 API calls per second . **Features**: Three-level namespace (catalog.schema.object); **credential vending**—clients never access cloud storage directly; UC issues temporary credentials after enforcing access policies; **catalog federation** to mount external catalogs (HMS, on-prem DBMS); **Delta UniForm** for Iceberg/Hudi interoperability; lineage APIs; change event streams for discovery catalogs; audit log system tables . **Pricing**: Quote-only; bundled with Databricks platform. **Free tier**: Limited Community Edition. **Best for**: Databricks customers wanting unified governance across tables, volumes, models, and AI assets—**trade-off**: ecosystem lock-in and enterprise pricing.
-
-
-
-- **[Snowflake Secure Data Sharing](https://www.snowflake.com/)**
-
-  **Cross-account data sharing without data copying** using Snowflake's services layer and metadata store. **No actual data is replicated or transferred**—shared objects are read-only, and consumers pay only for compute to query them . Supports tables, dynamic tables, external tables, Iceberg tables, views, UDFs, and models. **Reader accounts** enable sharing with parties who do not have Snowflake licenses . **Architecture**: Multi-cluster, shared-data—storage (S3), virtual warehouses (compute), and cloud services (metadata, access control, optimization) are separated . **Pricing**: Consumption-based credits; no storage cost to consumers for shared data. **Free tier**: Trial credits available. **Best for**: Snowflake customers wanting governed data sharing across business units, partners, or customers without ETL or data duplication.
-
-
-
-- **[AWS Lake Formation](https://aws.amazon.com/lake-formation/)**
-
-  **Data lake governance** built on AWS Glue Data Catalog. **No additional charge** for Lake Formation features—standard rates apply for underlying S3, Glue, and compute services . Centralizes permissions across S3, Athena, EMR, Redshift, and other AWS analytics services. **Pricing**: No Lake Formation surcharge; pay for AWS services consumed. **Free tier**: AWS Free Tier applies to underlying services. **Best for**: AWS-centric organizations wanting centralized access control for S3-based data lakes without additional governance licensing.
-
-
-
-- **[Google Cloud Dataplex](https://cloud.google.com/dataplex)**
-
-  **Intelligent data fabric** for unified analytics across distributed data. Introduces **Lakes** (logical data domains) and **Zones** (sub-domains for data contracts and security), with policies propagating from Lakes to Zones to assets . **Automated metadata discovery** for structured and unstructured data; **sensitive data classification**; data quality checks and anomaly detection. **Pricing**: Consumption-based on Google Cloud; no separate onboarding fees for platform access . **Free tier**: Google Cloud Free Tier applies. **Best for**: Google Cloud organizations wanting automated metadata management and centralized governance across BigQuery, Dataproc, and GCS.
-
-
-
-- **[Microsoft Purview](https://www.microsoft.com/en-us/security/business/microsoft-purview)**
-
-  **Unified data governance, risk, and compliance** platform spanning M365, Azure, and hybrid sources. Includes Data Catalog, sensitivity labels, DLP, Insider Risk Management, eDiscovery, and Compliance Manager . **Critical for M365 Copilot**—sensitivity labels and DLP prevent Copilot from exposing over-shared content to unauthorized users . **Pricing**: Requires M365 E5 Compliance add-on (**$12/user/month**) or full E5 (**$57/user/month**) for complete functionality . **Free tier**: Basic labels and DLP on E3. **Best for**: Microsoft 365 enterprises needing governance that covers both data catalog and information protection—**trade-off**: licensing cost and Microsoft ecosystem focus.
-
-
-
-- **[Cloudera Shared Data Experience (SDX)](https://www.cloudera.com/)**
-
-  **Unified data access and governance** across Cloudera environments. Integration with **Trino** and **Octopai Data Lineage** delivers a single secure endpoint for all data across engines, clouds, and on-premises without duplicating security policies . Unifies metadata and access controls for self-service data access. **Pricing**: Quote-only; bundled with Cloudera Data Platform. **Free tier**: None. **Best for**: Cloudera CDP customers wanting centralized governance across hybrid data estates.
-
-
-
-- **[Dremio Arctic](https://www.dremio.com/)**
-
-  **Data lakehouse management service** with Git-like operations for Apache Iceberg catalogs. Built on **Project Nessie**—provides branching, version control, and rollback for datasets without copying data . Works with Dremio Sonar, Apache Spark, and Apache Flink. **Pricing**: Quote-only; bundled with Dremio Cloud. **Free tier**: Trial available. **Best for**: teams wanting version-controlled Iceberg catalogs with Git-like workflows for data experimentation and audit.
-
+| Product | Company Size (Valuation / Revenue) | Pricing (Starting Tier) | Free Tier / Trial Limits | Details |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Microsoft Purview](https://www.microsoft.com/en-us/security/business/microsoft-purview)** | **~$3.9 Trillion** market cap (Microsoft) | **Data Map Capacity Units: $0.411/CU/hour** (~$300/mo per 10 GB metadata & 25 ops/sec); **Governed Assets: ~$0.50/asset/month** ($0.0165/day); **M365 Compliance add-on: $12/user/month** (or **$57/user/month** for full E5) | **Free tier includes up to 1,000 annotated assets forever** (curator API only); enterprise suite offers a **90-day free trial with 25 Microsoft Purview Suite licenses** | **Unified data governance, risk, and compliance** platform spanning M365, Azure, and multi-cloud sources. Provides unified data catalog, sensitivity labels, DLP, and Insider Risk Management—essential for securing Microsoft 365 Copilot against over-shared enterprise data. |
+| **[Google Cloud Dataplex](https://cloud.google.com/dataplex)** | **~$3.4 Trillion** market cap (Alphabet) | **Standard Processing: $0.060/DCU-hr; Premium Processing: $0.089/DCU-hr; Enriched Metadata Storage: $0.20/GiB/month** | **First 100 DCU-hours/month of Standard Processing and first 1 MiB of enriched metadata storage are 100% free forever**; new GCP accounts receive **$300 credits for 90 days** | **Intelligent data fabric** for unified analytics across distributed data. Introduces Lakes and Zones with policy propagation. Automated metadata discovery across BigQuery, Dataproc, and Cloud Storage, with automated sensitive data classification and data quality checks. |
+| **[AWS Lake Formation](https://aws.amazon.com/lake-formation/)** | **~$2.7 Trillion** market cap (Amazon) | **Governance policies: $0.00** (Lake Formation Storage API: **$2.25 per TB scanned** with 10 MB minimum per query; Glue Catalog beyond free tier: **$1.00 per 100,000 objects/month** and **$1.00 per 1M requests**) | **Glue Data Catalog includes 1,000,000 free objects & 1,000,000 free requests per month forever**; standard AWS 12-month free tier (5 GB S3) applies | **Data lake governance** built on AWS Glue Data Catalog. Centralizes permissions across Amazon S3, Athena, EMR, Redshift Spectrum, and other AWS analytics engines with cell-, row-, and column-level security. |
+| **[Databricks Unity Catalog](https://www.databricks.com/)** | **$190 Billion** valuation / **$7B+ ARR** run-rate (Databricks) | **Jobs Classic: $0.15/DBU; All-Purpose Classic: $0.55/DBU; Serverless SQL: $0.70/DBU** (Premium tier on AWS/Azure) | **14-day free trial with up to $400 in usage credits** (or forever-free Community Edition limited to serverless micro-clusters with daily compute quotas) | **Unified governance layer for data and AI** across the lakehouse. Managing **~100M tables, ~550k volumes, and ~400k ML models** for ~9,000 customers, serving ~60,000 API calls/sec. Three-level namespace (`catalog.schema.object`), credential vending, catalog federation, Delta UniForm, and audit log system tables. |
+| **[Snowflake Secure Data Sharing](https://www.snowflake.com/)** | **~$115 Billion** market cap / **$3.6B+ ARR** (Snowflake) | **Standard Edition: $2.00/credit; Enterprise Edition: $3.00/credit; Storage: $23/TB/month** | **30-day free trial with $400 in free usage credits** | **Cross-account data sharing without copying** using Snowflake's services layer and metadata store. Zero data replication—shared objects are read-only, consumers pay only compute to query. Supports reader accounts for non-Snowflake consumers. Multi-cluster, shared-data architecture. |
+| **[Cloudera Shared Data Experience (SDX)](https://www.cloudera.com/)** | **$5.3 Billion** PE buyout valuation / **~$1.0B ARR** (Cloudera) | **CDP Public Cloud: starts at $0.04/CCU-hr** (Data Hub) to **$0.054-$0.07/CCU-hr** (Data Warehouse); **CDP Private Cloud starts at ~$10,000/node/year** (or **$400/CCU/year**) | **60-day free trial of CDP Private Cloud Base / Data Science Workbench** with no license key required | **Unified data access and governance** across Cloudera environments. Integrates Apache Ranger, Apache Atlas, Trino, and Octopai Data Lineage to provide a single secure endpoint for enterprise data across multi-cloud and on-premises environments without policy replication. |
+| **[Dremio Arctic](https://www.dremio.com/)** | **$2.0 Billion** valuation / **~$100M ARR** (Dremio) | **Dremio Cloud: $0.20 per DCU-hour** (Extra Small engine at 32 DCUs = **$6.40/hr**; Small at 64 DCUs = **$12.80/hr**) | **Dremio Cloud Forever-Free Standard Tier** (capped engine sizes, Community support) and **Dremio Community Edition (forever-free self-hosted software)** | **Data lakehouse management service** with Git-like operations for Apache Iceberg catalogs. Powered by open-source Project Nessie, providing instant branching, zero-copy commits, and rollbacks for Iceberg tables across Spark, Flink, and Dremio Sonar. |
 
 
 ## Open-Source GitHub Projects
